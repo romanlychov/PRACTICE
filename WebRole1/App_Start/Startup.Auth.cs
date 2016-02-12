@@ -1,0 +1,73 @@
+﻿using System;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.DataProtection;
+using Microsoft.Owin.Security.Google;
+using Owin;
+using WebRole1.Models;
+
+namespace WebRole1
+{
+    public partial class Startup {
+
+        // Дополнительные сведения о настройке проверки подлинности см. по адресу: http://go.microsoft.com/fwlink/?LinkId=301883
+        public void ConfigureAuth(IAppBuilder app)
+        {
+            // Настройка контекста базы данных, диспетчера пользователей и диспетчера входа для использования одного экземпляра на запрос
+            app.CreatePerOwinContext(ApplicationDbContext.Create);
+            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+            app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
+
+            // Включение использования файла cookie, в котором приложение может хранить информацию для пользователя, выполнившего вход,
+            // и использование файла cookie для временного хранения информации о входах пользователя с помощью стороннего поставщика входа
+            // Настройка файла cookie для входа
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                LoginPath = new PathString("/Account/Login"),
+                Provider = new CookieAuthenticationProvider
+                {
+                    OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
+                        validateInterval: TimeSpan.FromMinutes(30),
+                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
+                }
+            });
+            // Использование файла cookie для временного хранения информации о входах пользователя с помощью стороннего поставщика входа
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+
+            // Позволяет приложению временно хранить информацию о пользователе, пока проверяется второй фактор двухфакторной проверки подлинности.
+            app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
+
+            // Позволяет приложению запомнить второй фактор проверки имени входа. Например, это может быть телефон или почта.
+            // Если выбрать этот параметр, то на устройстве, с помощью которого вы входите, будет сохранен второй шаг проверки при входе.
+            // Точно так же действует параметр RememberMe при входе.
+            app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
+
+            // Раскомментируйте приведенные далее строки, чтобы включить вход с помощью сторонних поставщиков входа
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: "",
+            //    clientSecret: "");
+
+            //
+             //   consumerKey: "5288303",
+            //   consumerSecret: "NDyEXl6a7ryhbqyNYVbe");
+
+            app.UseFacebookAuthentication(
+               appId: "823723254441182",
+               appSecret: "77bffd3b0931385776f311858afa41de");
+
+            //app.UseGoogleAuthentication()
+             // appId: "5288303",
+             // appSecret: "NDyEXl6a7ryhbqyNYVbe");
+
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
+            //});
+        }
+    }
+}
