@@ -1997,7 +1997,7 @@ textarea.input-lg {
   }
 }
 
-.btn {
+/*.btn {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -2015,7 +2015,7 @@ textarea.input-lg {
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
-}
+}*/
 
 .btn:focus {
   outline: thin dotted #333;
@@ -2023,11 +2023,11 @@ textarea.input-lg {
   outline-offset: -2px;
 }
 
-.btn:hover,
+/*.btn:hover,
 .btn:focus {
   color: #333333;
   text-decoration: none;
-}
+}*/
 
 .btn:active,
 .btn.active {
@@ -2047,14 +2047,31 @@ fieldset[disabled] .btn {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.btn {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #33cc4a;
+  padding: 1px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #003300;
+  text-decoration: none;
+  color: #ebebe0;
+}
 
 .btn-default {
   color: #333333;
-  background-color: #ffffff;
+  background-color: #cadfaa;
   border-color: #cccccc;
 }
 
-.btn-default:hover,
+/*.btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
@@ -2087,7 +2104,7 @@ fieldset[disabled] .btn-default:active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
   border-color: #cccccc;
-}
+}*/
 
 .btn-primary {
   color: #ffffff;
@@ -4934,7 +4951,7 @@ a.list-group-item.active > .badge,
  
 
 .jumbotron {
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 15px;
   font-size: 15px;
   font-weight: 500;
@@ -4962,8 +4979,8 @@ a.list-group-item.active > .badge,
     padding-bottom: 15px;
   }
   .container .jumbotron {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 90px;
+    padding-left: 90px;
   }
   .jumbotron h1 {
     font-size: 63px;

@@ -47,7 +47,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">GPS.NET</a>
+                    <asp:Image id="LOGO" runat="server" AlternateText="GPS.NET"  ImageUrl="Безымянный-8.png" Width="150" Height="50" /> 
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

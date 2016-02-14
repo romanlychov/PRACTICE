@@ -13,6 +13,15 @@ namespace WebRole1 {
     public partial class SiteMaster {
         
         /// <summary>
+        /// LOGO элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image LOGO;
+        
+        /// <summary>
         /// MainContent элемент управления.
         /// </summary>
         /// <remarks>

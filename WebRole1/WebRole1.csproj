@@ -200,6 +200,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Безымянный-1.png" />
+    <Content Include="Безымянный-7.gif" />
+    <Content Include="Безымянный-8.png" />
     <None Include="Properties\PublishProfiles\gpsdotnet - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />

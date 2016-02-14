@@ -13,5 +13,9 @@ namespace WebRole1
         {
 
         }
+        protected void DeFault(object sender, EventArgs e)
+        {
+           
+            }
     }
 }

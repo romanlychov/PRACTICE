@@ -7,13 +7,13 @@
         <%--<p class="lead"> Тут будут телефоны</p>   <a href="" class="btn btn-primary btn-lg"> &raquo;</a>--%>
 
      
-        <input type="text" value="Введите имя:" size="15"> <input type="text" value="Введите IMEI:" size="15"> <a href="#" class="btn btn-primary btn-l">Поиск</a>                                    
+        <asp:TextBox ID="TextBox1" runat="server" Text="Введите имя"></asp:TextBox> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox> <asp:Button ID="Button1" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="40" />
          
-    <input type="text" value="Введите имя:" size="15"> <input type="text" value="Введите IMEI:" size="15" > <a href="#" class="btn btn-primary btn-l" >Поиск</a> </br></br>
+      <asp:TextBox ID="TextBox3" runat="server" Text="Введите имя"></asp:TextBox> <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox> <asp:Button ID="Button2" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="40"/>
         
-        <input type="text" value="Введите имя:" size="15"> <input type="text" value="Введите IMEI:" size="15"> <a href="#" class="btn btn-primary btn-l">Поиск</a>
+        <asp:TextBox ID="TextBox5" runat="server" Text="Введите имя"></asp:TextBox> <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox> <asp:Button ID="Button3" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="40" />
           
-        <input type="text"  value="Введите имя:"  size="15" > <input type="text" value="Введите IMEI:" size="15" > <a href="#" class="btn btn-primary btn-l">Поиск</a> </br></br>
+        <asp:TextBox ID="TextBox7" runat="server" Text="Введите имя"></asp:TextBox> <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox> <asp:Button ID="Button4" runat="server"  Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="40"/>
           
         
 
