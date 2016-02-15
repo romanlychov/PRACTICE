@@ -162,7 +162,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
+  margin: 0px 0px 0 137px;
   font-family: inherit;
   font-size: 100%;
 }
@@ -402,6 +402,7 @@ hr {
 
 p {
   margin: 0 0 10px;
+    width: 351px;
 }
 
 .lead {
@@ -860,6 +861,8 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+    top: 8px;
+    left: 0px;
 }
 
 .col-xs-1,
@@ -1719,7 +1722,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
@@ -1749,7 +1751,6 @@ fieldset[disabled] .form-control {
 }
 
 textarea.form-control {
-  height: auto;
 }
 
 .form-group {
@@ -1964,6 +1965,10 @@ textarea.input-lg {
   padding-top: 7px;
   margin-top: 0;
   margin-bottom: 0;
+    top: 7px;
+    left: 0px;
+    width: 178px;
+    height: 27px;
 }
 
 .form-horizontal .form-group {
@@ -2066,6 +2071,33 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
+  color: #333333;
+  background-color: #cadfaa;
+  border-color: #cccccc;
+}
+
+.btn2 {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #33cc4a;
+  padding: 1px 20px 10px 20px;
+  text-decoration: none;
+    margin-left: 230px;
+    margin-top: 20px;
+ 
+}
+
+.btn2:hover {
+  background: #003300;
+  text-decoration: none;
+  color: #ebebe0;
+}
+
+.btn2-default {
   color: #333333;
   background-color: #cadfaa;
   border-color: #cccccc;
@@ -3668,7 +3700,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   height: 45px;
-  padding: 10px 16px;
+  padding: 1px 1px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
@@ -3787,6 +3819,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   white-space: nowrap;
 }
+.label34{ margin-left: 140px;}
 
 .input-group-btn > .btn {
   position: relative;
@@ -4946,18 +4979,23 @@ a.list-group-item.active > .badge,
 
 
 
-
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
 
  
 
 .jumbotron {
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 15px;
   font-size: 15px;
   font-weight: 500;
   line-height: 2.1428571435;
   color: inherit;
   background-color: #eeeeee;
+    background-image: url(green-background-4757-luxury.jpg);
 }
 
 .jumbotron h1 {
@@ -4979,8 +5017,8 @@ a.list-group-item.active > .badge,
     padding-bottom: 15px;
   }
   .container .jumbotron {
-    padding-right: 90px;
-    padding-left: 90px;
+    padding-right: 60px;
+    padding-left: 60px;
   }
   .jumbotron h1 {
     font-size: 63px;

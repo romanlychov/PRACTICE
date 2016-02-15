@@ -1,46 +1,62 @@
 ﻿<%@ Page Title="Контакты" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebRole1.Contact" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <%--<h2><%: Title %>.</h2>
-    <h3>Наши контакты</h3>
-    <address><br />
-        Команда разработчиков:<br /><br />
-        Шпортюк Анастасия <br /><br />
-        Матвеева Анастасия <br /><br />
-        Лычов Роман <br /><br />
-        Креминский Владислав <br />
-        <br /><abbr title="Phone">Телефон:</abbr>
-        +380939826013
-    </address>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server"  >
+   <div style="margin-left: 150px; margin-top: 50px; width: 900px; height: 499px; background-image: url('contact4.jpg')" >
 
-    <address>
-        <strong>Поддержка:</strong>   <a href="mailto:nanami2995@gmail.com">nanami2995@gmail.com</a><br />
-        
-    </address>--%>
-    
-    
-        <div style="margin-right: 100px; margin-top: 50px;">
-
-            Введите Имя:<br/>
-            <asp:TextBox ID="NameTbx" runat="server" Width="232px" CssClass="form-control" Height="25px" BackColor="#E2E8EE"></asp:TextBox>
-            
             <br/>
-             Введите Email:<br/>
-            <asp:TextBox ID="EmailTbx" runat="server" Width="232px" CssClass="form-control" Height="25px" BackColor="#E6E9ED"></asp:TextBox>
+            <br/>
+       <br/>
+            <asp:TextBox ID="NameTbx" runat="server" Width="350px" CssClass="form-control" Height="25px" BackColor="#E2E8EE" ></asp:TextBox>
+            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br/>
-            Тема сообщения:<br/>
-            <asp:TextBox ID="ThemeTbx" runat="server" Width="233px" CssClass="form-control" Height="25px" BackColor="#EBEBEB"></asp:TextBox>
+            <asp:TextBox ID="EmailTbx" runat="server" Width="351px" CssClass="form-control" Height="25px" BackColor="#E6E9ED"></asp:TextBox>
+       
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br/>
-             Текст сообщения:<br/>
-            <asp:TextBox ID="TextTbx" runat="server" Height="139px" TextMode="MultiLine" OnTextChanged="TextTbx_TextChanged" Width="236px" CssClass="form-control" BackColor="#EFEFEF"></asp:TextBox>
+            <asp:TextBox ID="ThemeTbx" runat="server" Width="351px" CssClass="form-control" Height="25px" BackColor="#EBEBEB"></asp:TextBox>
+            &nbsp;<br />
+           
+            <asp:TextBox ID="TextTbx" runat="server" Height="139px" TextMode="MultiLine" OnTextChanged="TextTbx_TextChanged" Width="354px" CssClass="form-control" BackColor="#EFEFEF"></asp:TextBox>
             <br />
+            <asp:Label ID="Success" ForeColor="green" CssClass="label34" runat="server" ></asp:Label>
+
             <br/>
-                 <asp:Button ID="btnSend" Text="Отправить"  runat="server" Width="131px" OnClick="btnSend_Click1" CssClass="btn btn-default" Font-Names="Century Gothic" />
+                 <asp:Button ID="btnSend" Text="Отправить"  runat="server" Width="131px" OnClick="btnSend_Click1" CssClass="btn btn-default" Font-Names="Century Gothic"  />
             <br />
-        <asp:Label ID="Success" ForeColor="green" runat="server"></asp:Label>
+       <br />
+       <br />
 
         </div>
+    <script type='text/javascript'>
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.id = 'supportScript';
+            s.charset = 'utf-8';
+            s.async = true;
+            s.src = '//me-talk.ru/support/support.js?h=503f693f82d3fda9eeb3a8c80cf7c7a1';
+            var sc = document.getElementsByTagName('script')[0];
+
+            var callback = function () {
+                /*
+                    Здесь вы можете вызывать API. Например, чтобы изменить отступ по высоте:
+                    supportAPI.setSupportTop(200);
+                */
+            };
+
+            s.onreadystatechange = s.onload = function () {
+                var state = s.readyState;
+                if (!callback.done && (!state || /loaded|complete/.test(state))) {
+                    callback.done = true;
+                    callback();
+                }
+            };
+
+            if (sc) sc.parentNode.insertBefore(s, sc);
+            else document.documentElement.firstChild.appendChild(s);
+        })();
+</script>
           
 </asp:Content>
 

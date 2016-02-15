@@ -59,15 +59,15 @@ namespace WebRole1
                appId: "823723254441182",
                appSecret: "77bffd3b0931385776f311858afa41de");
 
-            //app.UseGoogleAuthentication()
-             // appId: "5288303",
-             // appSecret: "NDyEXl6a7ryhbqyNYVbe");
+            //app.UseTwitterAuthentication(
+            //  consumerKey: "Jqq9Gt17wmu9K5nYrbluFIO2v",
+            //  consumerSecret: "aFo47Wfj76je094spmVPQPtK296uuhVk5EgMEKYVn0G89ukett");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "979452387192-t1kde9fun0720nkln95rfofmaiihjrl2.apps.googleusercontent.com",
+                ClientSecret = "-5fEov3QeovcxHls9r4ZLoPI"
+            });
         }
     }
 }

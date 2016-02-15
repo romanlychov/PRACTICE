@@ -22,7 +22,7 @@ namespace WebRole1
             m.To.Add("testansicommunity@gmail.com");
             m.From = new MailAddress(EmailTbx.Text);
             m.Subject = "Тема сообщения:" + ThemeTbx.Text;
-            m.Body = "Отправитель: "+EmailTbx.Text+" <br> "+TextTbx.Text;
+            m.Body = "Отправитель: " + EmailTbx.Text + " <br> " + "Имя отправителя: " + " <br> " + TextTbx.Text;
 
             m.IsBodyHtml = true;
             SmtpClient sm = new SmtpClient();
