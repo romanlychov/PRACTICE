@@ -15,25 +15,23 @@ namespace WindowsFormsApplication1
     {
         public string Latitude;
         public string Longitude;
+        public double a = 46.449544;
+        public double b = 30.753610;
+
+        public double a1 = 46.449544;
+        public double b1 = 30.753610;
+
         public Form1()
         {
             InitializeComponent();
-
            
+            
+            latitude1.Text = a1.ToString();
+            longtitude1.Text = b1.ToString();
+            //label3.Text=
 
-            try
-             {
-                     serialPort1.Open();
-             }
-             catch (Exception ex)
-            {
-                       MessageBox.Show(ex.Message);
-                         timer1.Enabled = false;
-                         button1.Text = "START";
-                return;
-                 }
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,68 +53,30 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
-    {
-        string data = serialPort1.ReadExisting();
-        string[] strArr = data.Split('$');
-        for (int i = 0; i < strArr.Length; i++)
-        {
-            string strTemp = strArr[i];
-            string[] lineArr = strTemp.Split(',');
-            if (lineArr[0] == "GPGGA")
-            {
-                try
-                {
-              //Latitude
-                      Double dLat = Convert.ToDouble(lineArr[2]);
-                      int pt = dLat.ToString().IndexOf('.');
- 
-              double degreesLat =  
-              Convert.ToDouble(dLat.ToString().Substring(0, 2));
-                            
-                      double minutesLat =
-              Convert.ToDouble(dLat.ToString().Substring(2));
- 
-              double DecDegsLat = degreesLat + (minutesLat / 60.0);
- 
-                      Latitude = lineArr[3].ToString() + DecDegsLat;
- 
-                      //Longitude
-                      Double dLon = Convert.ToDouble(lineArr[4]);
-                      pt = dLon.ToString().IndexOf('.');
- 
-                      double degreesLon =
-              Convert.ToDouble(dLon.ToString().Substring(0, pt - 2));
- 
-                      double minutesLon =
-              Convert.ToDouble(dLon.ToString().Substring(pt - 2));
- 
-              double DecDegsLon = degreesLon + (minutesLon / 60.0);
- 
-              Longitude = lineArr[5].ToString() + DecDegsLon;
- 
-                           //Display
-                           latitude1.Text = Latitude;
-                           longtitude1.Text = Longitude;
- 
-                          // btnMapIt.Enabled = true;
-                }
-                catch
-                {
-                    //Can't Read GPS values
-                    latitude1.Text = "GPS Unavailable";
-                    longtitude1.Text = "GPS Unavailable";
-                  //  btnMapIt.Enabled = false;
-                }
-            }
+
+            label3.Text = DateTime.Now.ToString();
+            
+          
         }
-    }
-    else
-    {
-        latitude1.Text = "COM Port Closed";
-        longtitude1.Text = "COM Port Closed";
-        //btnMapIt.Enabled = false;
-    }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {  //{
+
+
+            double tr = trackBar1.Value*0.1;
+
+            a1 = a + tr;
+            b1 = b + tr;
+
+            
+
+            latitude1.Text = a1.ToString();
+            longtitude1.Text = b1.ToString();
+
+
         }
+
+      
     }
+
 }
