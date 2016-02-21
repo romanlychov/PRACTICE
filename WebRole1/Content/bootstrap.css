@@ -70,6 +70,9 @@ a:hover {
   outline: 0;
 }
 
+.Fork {
+    margin-left: 50px;
+}
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
@@ -162,7 +165,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0px 0px 0 137px;
+  margin: 0px 0px 0 116px;
   font-family: inherit;
   font-size: 100%;
 }
@@ -402,7 +405,7 @@ hr {
 
 p {
   margin: 0 0 10px;
-    width: 351px;
+    width: 544px;
 }
 
 .lead {

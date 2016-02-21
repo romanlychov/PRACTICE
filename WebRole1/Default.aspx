@@ -1,43 +1,36 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebRole1._Default" %>
-
+<%@ Import Namespace="System.Net" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        
-        <%--<p class="lead"> Тут будут телефоны</p>   <a href="" class="btn btn-primary btn-lg"> &raquo;</a>--%>
-
-     
-        <asp:TextBox ID="TextBox1" runat="server"  CssClass="form-control" Text="Введите имя" Width="370px"></asp:TextBox> <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="370px" Text="Введите код"></asp:TextBox> <asp:Button ID="Button1" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn2 btn2-default" Height="31px" Width="99px"   />
-         
-      <%--<asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" Text="Введите имя" Width="371px"></asp:TextBox> <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="371px" Text="Введите код"></asp:TextBox> <asp:Button ID="Button2" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="31px" Width="99px"/>--%>
-        
-        <%--<asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" Text="Введите имя" Width="728px"></asp:TextBox> <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" Width="728px" Text="Введите код"></asp:TextBox> <asp:Button ID="Button3" runat="server" Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="31px" Width="99px" />--%>
-          
-        <%--<asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" Text="Введите имя" Width="729px"></asp:TextBox> <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" Width="729px" Text="Введите код"></asp:TextBox> <asp:Button ID="Button4" runat="server"  Text="Поиск" OnClick="DeFault" CssClass="btn btn-default" Height="31px" Width="99px"/>--%>
-          
-        
-
+        <asp:TextBox ID="Name1Tbx" runat="server"   Text="Введите имя" Width="149px" Font-Size="10pt" Height="30px"></asp:TextBox> 
+        <asp:TextBox ID="LatTbx" runat="server" Width="151px" Font-Size="10pt" Height="30px">Ширина</asp:TextBox>
+        <asp:TextBox ID="LngTxt" runat="server" Width="151px" Font-Size="10pt" Height="30px">Долгота</asp:TextBox>
+        <asp:Button ID="btnGoogle" runat="server" Text="Поиск" OnClick="btnGoogle_Click"  Height="30px" Width="151px" Font-Size="10pt"   />
     </div>
-   
-    
-    
-    <style>
-      #map {
-        width: 1172px;
-        height: 400px;
-      }
-    </style>
+
+    <script runat="server" type="text/C#">
+
+        public void btnGoogle_Click(object sender, EventArgs e)
+        {
+             
+        }
+    </script>
  
-    <div id="map"></div>
+    <div id="map" style="width: 1172px; height: 400px;"></div>
     <script>
+        
         function initMap() {
+
+            var l = document.getElementById("<%= LatTbx.ClientID %>");
+            var l2 = document.getElementById("<%= LngTxt.ClientID %>");
             var mapDiv = document.getElementById('map');
             var map = new google.maps.Map(mapDiv, {
                 center: { lat: 46.460103, lng: 30.4315811 },
                 zoom: 8
             });
 
-            var myLatlng = new google.maps.LatLng(46.460103, 30.4315811);
+            var myLatlng = new google.maps.LatLng(l, l2);
 
             var contentString = '<div id="content"> Устройство находиться тут </div>';
             var infowindow = new google.maps.InfoWindow({
@@ -46,13 +39,17 @@
 
             var marker = new google.maps.Marker({
                 position: myLatlng,
-                map: map,
-                title: 'Uluru (Ayers Rock)'
+                icon: 'map_icon.png',
+                map:map,
+                title: "Улица,дом,квартира"
             });
-           
+
             google.maps.event.addListener(marker, 'click', function () {
                 infowindow.open(map, marker);
             });
+
+         
+
 
         }
     </script>

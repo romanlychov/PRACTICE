@@ -11,7 +11,8 @@ namespace WebRole1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            PanelAbout.Attributes.Add("style", "background-repeat:no-repeat");
+            PanelAbout.BackImageUrl = "~/paper.png";
         }
     }
 }

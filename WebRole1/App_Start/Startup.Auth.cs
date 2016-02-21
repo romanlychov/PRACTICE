@@ -56,8 +56,8 @@ namespace WebRole1
             //   consumerSecret: "NDyEXl6a7ryhbqyNYVbe");
 
             app.UseFacebookAuthentication(
-               appId: "823723254441182",
-               appSecret: "77bffd3b0931385776f311858afa41de");
+               appId: "836425509813122",
+               appSecret: "a9521198f39529ad45fe39e62b89d580");
 
             //app.UseTwitterAuthentication(
             //  consumerKey: "Jqq9Gt17wmu9K5nYrbluFIO2v",
@@ -65,8 +65,8 @@ namespace WebRole1
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "979452387192-t1kde9fun0720nkln95rfofmaiihjrl2.apps.googleusercontent.com",
-                ClientSecret = "-5fEov3QeovcxHls9r4ZLoPI"
+                ClientId = "809420500587-dteog26jrtpmlv8o956iaojaj50hst37.apps.googleusercontent.com",
+                ClientSecret = "9CyRb3eOms123OWcCvuKLMLc"
             });
         }
     }

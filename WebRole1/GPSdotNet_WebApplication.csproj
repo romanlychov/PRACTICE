@@ -192,9 +192,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="contact2.jpg" />
-    <Content Include="contact23.jpg" />
-    <Content Include="contact4.jpg" />
+    <Content Include="contact_form.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -203,13 +201,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="green-background-4757-luxury-high-definition.jpg" />
-    <Content Include="icon.png" />
-    <Content Include="Безымянный-1.png" />
-    <Content Include="Безымянный-7.gif" />
-    <Content Include="Безымянный-8.png" />
+    <Content Include="map_icon.png" />
+    <Content Include="logo.png" />
     <None Include="Properties\PublishProfiles\gpsdotnet - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="paper.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -244,7 +240,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
