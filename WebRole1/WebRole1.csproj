@@ -203,7 +203,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="map_icon.png" />
     <Content Include="logo.png" />
-    <None Include="Properties\PublishProfiles\gpsdotnet - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\gpsnet - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="paper.png" />
     <Content Include="Scripts\bootstrap.js" />

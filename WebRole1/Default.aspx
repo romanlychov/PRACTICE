@@ -4,8 +4,8 @@
 
     <div class="jumbotron">
         <asp:TextBox ID="Name1Tbx" runat="server"   Text="Введите имя" Width="149px" Font-Size="10pt" Height="30px"></asp:TextBox> 
-        <asp:TextBox ID="LatTbx" runat="server" Width="151px" Font-Size="10pt" Height="30px">Ширина</asp:TextBox>
-        <asp:TextBox ID="LngTxt" runat="server" Width="151px" Font-Size="10pt" Height="30px">Долгота</asp:TextBox>
+        <asp:TextBox ID="LatTbx" runat="server" Width="151px" Font-Size="10pt" Height="30px">46</asp:TextBox>
+        <asp:TextBox ID="LngTxt" runat="server" Width="151px" Font-Size="10pt" Height="30px">30</asp:TextBox>
         <asp:Button ID="btnGoogle" runat="server" Text="Поиск" OnClick="btnGoogle_Click"  Height="30px" Width="151px" Font-Size="10pt"   />
     </div>
 
@@ -22,8 +22,8 @@
         
         function initMap() {
 
-            var l = document.getElementById("<%= LatTbx.ClientID %>");
-            var l2 = document.getElementById("<%= LngTxt.ClientID %>");
+            var l = document.getElementById("<%=LatTbx.ClientID%>").value;
+            var l2 = document.getElementById("<%= LngTxt.ClientID %>").value;
             var mapDiv = document.getElementById('map');
             var map = new google.maps.Map(mapDiv, {
                 center: { lat: 46.460103, lng: 30.4315811 },
@@ -32,7 +32,7 @@
 
             var myLatlng = new google.maps.LatLng(l, l2);
 
-            var contentString = '<div id="content"> Устройство находиться тут </div>';
+            var contentString = '<div id="content"> Ваше устройство находиться тут </div>';
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
