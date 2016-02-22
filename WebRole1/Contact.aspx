@@ -80,7 +80,7 @@
 
    
 
-    <asp:TextBox ID="txtEmail" runat="server" style="margin-top: 10px; margin-left: 180px;"></asp:TextBox>
+    <asp:TextBox ID="txtEmail" runat="server" style="margin-top: 10px; margin-left: 180px;" TextMode="Email"></asp:TextBox>
 
     <asp:RequiredFieldValidator runat="server" ErrorMessage="Please enter the information requested." ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
 
