@@ -4,6 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DefaultConnection" value="DefaultEndpointsProtocol=https;AccountName=gpswar;AccountKey=gaJ6xuWrm1r6+bh2Pw1O+99zMkCUC5fFGc5zV9//+C15qrUfP7EHu4x7peMg4N7XKECYSdI++8II9B5Kdvxc9g==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

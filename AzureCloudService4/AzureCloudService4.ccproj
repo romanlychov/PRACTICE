@@ -37,20 +37,23 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Profiles" />
+    <Folder Include="WebRole1Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="WebRole1Content\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\gpscloudProduction.azurePubxml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\WebRole1\WebRole1.csproj">
       <Name>WebRole1</Name>
       <Project>{22358167-b7ab-4f42-88c5-666784e021bf}</Project>
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <RoleName>WebRole1</RoleName>
-      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WebRole1Content\" />
-  </ItemGroup>
-  <ItemGroup>
-    <DiagnosticsConfiguration Include="WebRole1Content\diagnostics.wadcfgx" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
